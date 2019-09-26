@@ -1,0 +1,56 @@
+.portada{
+        background: url('/imagenes/slider/slide2.jpg');
+        background-size: cover;
+        background-position: center;
+        min-height: 920px;
+    }
+  @media screen and (max-width: 690px){
+      .portada{
+        min-height: 500px;
+      }
+    }
+    .grs{
+        transition: all 2s ease;
+        background: rgba(0, 0, 0, 0.199);
+    }
+    .darken-4{
+        transition: all 2s ease;
+    }
+    .nav-list{
+        display: flex;
+        list-style: none;
+        position: relative;
+    }
+    .navitem{
+        min-width: 10rem;
+        text-align: center;
+    }
+    .navlink{
+        font-size: 1rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #fff;
+    }
+    .active{
+        height: 2px;
+        width: 10rem;
+        background-color: #fff;
+        position: absolute;
+        bottom: 0rem;
+        transition: transform .6s;
+    }
+    .navitem:nth-child(1):hover ~ .active{
+        transform: translateX(0rem); 
+    }
+    .navitem:nth-child(2):hover ~ .active{
+        transform: translateX(10rem); 
+    }
+    .navitem:nth-child(3):hover ~ .active{
+        transform: translateX(20rem); 
+    }
+    .navitem:nth-child(4):hover ~ .active{
+        transform: translateX(30rem); 
+    }
+    .navitem:nth-child(5):hover ~ .active{
+        transform: translateX(40rem); 
+    }
