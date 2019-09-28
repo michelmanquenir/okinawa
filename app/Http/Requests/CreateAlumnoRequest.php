@@ -35,6 +35,7 @@ class CreateAlumnoRequest extends FormRequest
             'correo'=> '',
             'fecha_pago'=> '',
             'categoria'=> '',
+            'imagen'=> '',
         ];
     }
     
@@ -69,6 +70,7 @@ class CreateAlumnoRequest extends FormRequest
             'correo'=> $data['correo'],
             'fecha_pago'=> $data['fecha_pago'],
             'categoria'=> $data['categoria'],
+            'imagen'=> $data['imagen'],
             ]);
             
         });

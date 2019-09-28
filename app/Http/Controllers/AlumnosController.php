@@ -38,7 +38,21 @@ class AlumnosController extends Controller
      */
   public function store(CreateAlumnoRequest $request)
     {
+      
+      //creamos variable de la imagen
+      $imagen= $request->file('imagen');
+      //si trae imagen la insertamos en la carpeta imagenes perfil
+      if($imagen){
+          $nombre = $imagen->getClientOriginalName();
+          $imagen->move('imagenes/perfil', $nombre);
+          $request['imagen'] = $nombre;
+      }
+      
        $request->createAlumno();
+      
+      
+      
+      
         return redirect('alumnos')->with('Mensaje', 'Alumnos Creado con Exito');
     }
     /**

@@ -53,7 +53,7 @@
                     <div class="form-group input-group col-md-12 col-lg-4 col-xs-12">
                         <div class="custom-file custom-file-text">
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="imagen" lang="es">
+                                <input type="file" class="custom-file-input" name="imagen" id="imagen" lang="es" value="{{old ('imagen')}}">
                                 <label class="custom-file-label" for="customFileLang">Foto de perfil</label>
                             </div>
                         </div>

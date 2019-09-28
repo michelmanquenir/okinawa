@@ -4,45 +4,21 @@
 <!-- Compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <body>
-    <nav id="menu" class="nav-wrapper fixed-top grs">
-        <div class="container">
-            <a href="#" class="brand-logo">Okinawa</a>
-            <a href="#" class="sidenav-trigger" data-target="mobile-menu">
-                <i class="material-icons">menu</i>
-            </a>
-            <ul class="navlist right hide-on-med-and-down">
-                <li class="navitem"><a class="navlink" href="/">Inicio</a></li>
-                <li class="navitem"><a class="navlink" href="/galeria">Galeria</a></li>
-                <li class="navitem"><a class="navlink" href="/quienes-somos">Quienes Somos</a></li>
-                <li class="navitem"><a class="navlink" href="/servicios">Servicios</a></li>
-                <li class="navitem"><a class="navlink" href="/contacto">Contacto</a></li>
-                <div class="active"></div>
-            </ul>
-            <ul class="sidenav " id="mobile-menu">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/galeria">Galeria</a></li>
-                <li><a href="/quienes-somos">Quienes Somos</a></li>
-                <li><a href="/servicios">Servicios</a></li>
-                <li><a href="/contacto">Contacto</a></li>
-            </ul> 
-        </div>
-    </nav> 
-
-
+    @include('navbar')
     <div class="section portada"></div>
     <!--Precios-->
-    <h1 class="center mb-5">Ven Unete A Okinawa</h1>
+    <h1 class="text-center h1-responsive mb-5">Ven Unete A Okinawa</h1>
     <div class="container-fluid">
 
         <!--<h1 class="center">Ven y unete a Okinawa </h1>-->
         <div class="container py-5">
 
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-12 col-lg-4 col-xs-12">
                     <div class="card text-center">
                         <div class="card-block">
                             <div class="py-3">
-                                <span class="h1">$</span><span class="display-1 align-middle">15.000</span>
+                                <h1 class="h1-responsive"><span class="h1">$</span>15.000</h1>
                             </div>
                             <p class="h1">Mensual</p>
                             <h4 class="card-title py-2">PRIMERA CLASE GRATIS</h4>
@@ -51,11 +27,11 @@
                         <a href="" class="card-footer btn bg-primary text-white">Contratar</a>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-12 col-lg-4 col-xs-12">
                     <div class="card text-center">
                         <div class="card-block">
                             <div class="py-3">
-                                <span class="h1">$</span><span class="display-1 align-middle">40.000</span>
+                                <h1 class="h1-responsive"><span class="h1">$</span>40.000</h1>
                             </div>
                             <p class="h1">Plan 3 meses</p>
                             <h4 class="card-title py-2">3 meses</h4>
@@ -64,11 +40,11 @@
                         <a href="" class="card-footer btn bg-primary text-white">Contratar</a>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-12 col-lg-4 col-xs-12">
                     <div class="card text-center">
                         <div class="card-block">
                             <div class="py-3">
-                                <span class="h1">$</span><span class="display-1 align-middle">145.000</span>
+                                <h1 class="h1-responsive"><span class="h1">$</span>140.000</h1>
                             </div>
                             <p class="h1">Anual</p>
                             <h4 class="card-title py-2">PRIMERA CLASE GRATIS</h4>
@@ -113,29 +89,75 @@
         </div>
     </div>
 
-    <footer class="page-footer grey darken-4">
-        <div class="container">
+    <div class="section mb-5">
+        <div class="row">
+            <div class="col-md-12 col-xs-12 col-lg-12">
+                <h1 class="text-center h1-responsive">Que dicen nuestros clientes</h1>
+            </div>
             <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Gimnasio Okinawa</h5>
-                    <p class="grey-text text-lighten-4">Visitanos en puente alto el belloto </p>
+                <div class="col-md-3 col-lg-3 col-xs-12">
+                    <div class="card">
+                        <!-- Card image -->
+                        <img class="card-img-top" src="{{ asset('imagenes/fotos/cristian.png') }}" alt="Card image cap">
+
+                        <!-- Card content -->
+                        <div class="card-body">
+
+                            <!-- Title -->
+                            <h4 class="card-title text-center"><a>Cristian E.</a></h4>
+                            <!-- Text -->
+                            <p class="card-text">Hola mundo.</p>
+                            <!-- Button -->
+                        </div>
+                    </div>
                 </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Redes Sociales</h5>
-                    <ul>
-                        <li><i class="fab fa-instagram"></i><a class="grey-text text-lighten-3" href="https://www.instagram.com/okinawa_gym/" target="_blank">  Instagram</a></li>
-                        <li><i class="fab fa-facebook-square"></i><a class="grey-text text-lighten-3" href="https://www.facebook.com/gimnasio.okinawa.395" target="_blank">  Facebook</a></li>
-                        <li><i class="fab fa-youtube"></i><a class="grey-text text-lighten-3" href="#!" target="_blank">  Youtube</a></li>
-                    </ul>
+                <div class="col-md-3 col-lg-3 col-xs-12">
+                    <div class="card">
+                        <!-- Card image -->
+                        <img class="card-img-top" src="{{ asset('imagenes/fotos/cristian.png') }}" alt="Card image cap">
+                        <!-- Card content -->
+                        <div class="card-body">
+                            <!-- Title -->
+                            <h4 class="card-title text-center"><a>Michel M.</a></h4>
+                            <!-- Text -->
+                            <p class="card-text">Hola mundo.</p>
+                            <!-- Button -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-xs-12">
+                    <div class="card">
+                        <!-- Card image -->
+                        <img class="card-img-top" src="{{ asset('imagenes/fotos/cristian.png') }}" alt="Card image cap">
+                        <!-- Card content -->
+                        <div class="card-body">
+                            <!-- Title -->
+                            <h4 class="card-title text-center"><a>Kamila</a></h4>
+                            <!-- Text -->
+                            <p class="card-text">Hola mundo.</p>
+                            <!-- Button -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-xs-12">
+                    <div class="card">
+                        <!-- Card image -->
+                        <img class="card-img-top" src="{{ asset('imagenes/fotos/cristian.png') }}" alt="Card image cap">
+                        <!-- Card content -->
+                        <div class="card-body">
+                            <!-- Title -->
+                            <h4 class="card-title text-center"><a>Kamila</a></h4>
+                            <!-- Text -->
+                            <p class="card-text">Hola mundo.</p>
+                            <!-- Button -->
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
-        <div class="footer-copyright">
-            <div class="container">
-                <a class="grey-text text-lighten-4 right" href="https://www.instagram.com/jeetzkiller/" target="_blank">Hola</a>
-            </div>
-        </div>
-    </footer>
+    </div>
+    @include('footer')
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -172,6 +194,3 @@
 
     </script>
 </body>
-
-
-@include('footer')
